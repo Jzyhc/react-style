@@ -10,8 +10,8 @@ const routePaths = [
   {
     path: '/app/refs',
     component: Async(() => import('@page/accident/secKefu/Create')),
-    title: '明镜-交通事故-创建'
-  },
+    title: 'ref'
+  }
 ];
 
 export default routePaths;
