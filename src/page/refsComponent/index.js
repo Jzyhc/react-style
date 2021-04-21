@@ -11,7 +11,11 @@ export default class index extends Component {
   render() {
     return (
       <div>
+<<<<<<< HEAD
         21212
+=======
+        212
+>>>>>>> 77075aac389f6fcce0d4749e6cf2d3a5a91a3698
       </div>
     )
   }
