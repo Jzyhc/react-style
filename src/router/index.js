@@ -1,11 +1,12 @@
 /*
  * @Author       : jincheng
  * @Date         : 2021-04-12 10:41:26
- * @LastEditTime : 2021-04-21 14:58:59
+ * @LastEditTime : 2021-04-21 15:15:05
  * @LastEditors  : jincheng
  * @FilePath     : /react-style/src/router/index.js
  */
 import React from 'react'
+
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { Route, Switch, Redirect, useHistory } from 'react-router-dom';
 import { withRouter } from 'react-router';
@@ -52,7 +53,7 @@ const RouteIndex = () => {
             style={{
               padding: 24,
               margin: 0,
-              minHeight: 280,
+              minHeight: 780,
             }}
           >
             <Switch>
