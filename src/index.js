@@ -1,13 +1,25 @@
+/*
+ * @Author       : jincheng
+ * @Date         : 2021-04-09 18:02:59
+ * @LastEditTime : 2021-04-12 11:04:29
+ * @LastEditors  : jincheng
+ * @FilePath     : /react-style/src/index.js
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter } from 'react-router-dom';
+import MyRouter from './router';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <HashRouter>
+    <MyRouter />
+  </HashRouter>,
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
