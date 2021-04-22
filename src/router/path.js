@@ -1,7 +1,7 @@
 /*
  * @Author       : jincheng
  * @Date         : 2021-04-12 10:41:36
- * @LastEditTime : 2021-04-21 15:06:09
+ * @LastEditTime : 2021-04-22 14:33:17
  * @LastEditors  : jincheng
  * @FilePath     : /react-style/src/router/path.js
  */
@@ -11,6 +11,7 @@ import RefClass from '../page/refsComponent/RefClass/index';
 import RefClassOrHooks from '../page/refsComponent/RefClassOrHooks/index';
 import RefHooks from '../page/refsComponent/RefHooks/index';
 import RefHOC from '../page/refsComponent/RefHOC/index';
+import RefCallBack from '../page/refsComponent/RefCallBack/index';
 
 import CtxClass from '../page/Context/CtxClass/index';
 import CtxHooks from '../page/Context/CtxHooks/index';
@@ -24,6 +25,11 @@ const routePaths = [
         path: '/app/refs/class',
         component: RefClass,
         title: 'ref-class'
+      },
+      {
+        path: '/app/refs/callback',
+        component: RefCallBack,
+        title: 'ref-callBack'
       },
       {
         path: '/app/refs/hooks',
