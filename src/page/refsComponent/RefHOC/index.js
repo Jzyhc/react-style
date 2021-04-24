@@ -6,34 +6,27 @@
  * @FilePath     : /react-style/src/page/refsComponent/RefHOC/index.js
  */
 
-import React, { Component, createRef } from 'react'
+import React, { useRef } from 'react'
+import HooksUser from './HooksUser';
 import { Button } from 'antd'
-import HocIndex from './HocIndex'
-import User from './User'
+const Index = () => {
+  const hocRef = useRef(null);
 
-const HocUser = HocIndex(User);
-export default class RefHOC extends Component {
-  constructor(props) {
-    super(props)
-    this.classHocRef = createRef(null)
-    this.inputRef = createRef(null)
-    this.handClick = this.handClick.bind(this)
+  const changeInput=()=>{
+    hocRef.current.changText('父组件修改子组件')
   }
-
-  handClick(){
-    this.classHocRef.current.updatFn(this.inputRef.current.value)
-  }
-
-  render() {
-    return (
+  return (
+    <div>
+      我是hooks 组件
+      <HooksUser ref={hocRef} name='user' />
       <div>
-        <HocUser name={'name'} refText={this.classHocRef} />
-        <input ref={this.inputRef} />
-        <Button type="primary" onClick={this.handClick}>
+        <Button type="primary" onClick={changeInput}>
           Submit
         </Button>
       </div>
-    )
-  }
+    </div>
+  )
 }
+
+export default Index
 
