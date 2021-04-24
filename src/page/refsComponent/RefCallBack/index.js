@@ -1,47 +1,71 @@
 /*
  * @Author       : jincheng
  * @Date         : 2021-04-22 14:32:29
- * @LastEditTime : 2021-04-22 21:05:20
+ * @LastEditTime : 2021-04-23 10:54:18
  * @LastEditors  : jincheng
  * @FilePath     : /react-style/src/page/refsComponent/RefCallBack/index.js
  */
-import React, { Component } from 'react'
-// import { Button } from 'react'
-export default class index extends Component {
-  constructor(props) {
-    super(props);
-    this.textInput = null;
+// import React, { Component } from 'react'
+// import { Button } from 'antd'
+// export default class index extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.textInput = null;
 
-    this.setTextInputRef = element => {
-      this.textInput = element;
-    };
+//     this.setTextInputRef = element => {
+//       this.textInput = element;
+//     };
+//     this.focusTextInput = () => {
+//       if (this.textInput) this.textInput.focus();
+//       console.log('this.textInput',this.textInput.value)
+//     };
+//   }
+//   componentDidMount() {
+//     this.focusTextInput();
+//   }
 
-    this.focusTextInput = () => {
-      // 使用原生 DOM API 使 text 输入框获得焦点
-      if (this.textInput) this.textInput.focus();
-    };
-  }
+//   render() {
+//     return (
+//       <div>
+//         <input
+//           type="text"
+//           ref={this.setTextInputRef}
+//         />
+//         <Button type="primary" onClick={this.focusTextInput}>
+//           Submit
+//         </Button>
+//       </div>
+//     );
+//   }
+// }
 
-  componentDidMount() {
-    // 组件挂载后，让文本框自动获得焦点
-    this.focusTextInput();
-  }
+import { Button } from 'antd';
+import React, { useEffect } from 'react';
 
-  render() {
-    // 使用 `ref` 的回调函数将 text 输入框 DOM 节点的引用存储到 React
-    // 实例上（比如 this.textInput）
-    return (
-      <div>
-        <input
-          type="text"
-          ref={this.setTextInputRef}
-        />
-        <input
-          type="button"
-          value="Focus the text input"
-          onClick={this.focusTextInput}
-        />
-      </div>
-    );
-  }
+function MyInput(props) {
+  return (
+    <input type="text" ref={props.inputRef} />
+  )
 }
+
+const HooksFnRef = () => {
+  let ref = null;
+  useEffect(() => {
+    ref.focus();
+    console.log('ref', ref)
+  }, [ref]);
+  const getInputVlaue = () => {
+    console.log(ref.value)
+  }
+  return (
+    <div>
+      <MyInput inputRef={ele => ref = ele} />
+      <Button type="primary" onClick={getInputVlaue}>
+        Submit
+      </Button>
+    </div>
+  )
+}
+
+export default HooksFnRef
+
