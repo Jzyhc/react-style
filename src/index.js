@@ -1,7 +1,7 @@
 /*
  * @Author       : jincheng
  * @Date         : 2021-04-09 18:02:59
- * @LastEditTime : 2021-04-21 11:34:45
+ * @LastEditTime : 2021-06-07 19:06:18
  * @LastEditors  : jincheng
  * @FilePath     : /react-style/src/index.js
  */
@@ -12,11 +12,18 @@ import MyRouter from './router';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+// import { Provider } from 'mobx-react'
+// import store from './store/index'
 ReactDOM.render(
   <HashRouter>
     <MyRouter />
   </HashRouter>,
+  // <Provider {...store}>
+  //   <HashRouter>
+  //     <MyRouter />
+  //   </HashRouter>
+  // </Provider>
+  // ,
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>,
