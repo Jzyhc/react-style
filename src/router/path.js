@@ -1,7 +1,7 @@
 /*
  * @Author       : jincheng
  * @Date         : 2021-04-12 10:41:36
- * @LastEditTime : 2021-04-25 11:53:15
+ * @LastEditTime : 2021-06-07 11:41:41
  * @LastEditors  : jincheng
  * @FilePath     : /react-style/src/router/path.js
  */
@@ -24,12 +24,14 @@ import PerUseMemo from '../page/performance/UseMemo/index';
 import CityA from '../page/customHooks/CityA/index';
 import CityB from '../page/customHooks/CityB/index';
 
+import MobxFn from '../page/Mobx/index'
+
 
 const routePaths = [
   {
-    title:'ref',
-    icon:<UserOutlined />,
-    list:[
+    title: 'ref',
+    icon: <UserOutlined />,
+    list: [
       {
         path: '/app/refs/class',
         component: RefClass,
@@ -58,9 +60,9 @@ const routePaths = [
     ]
   },
   {
-    title:'Context',
-    icon:<LaptopOutlined />,
-    list:[
+    title: 'Context',
+    icon: <LaptopOutlined />,
+    list: [
       {
         path: '/app/context/ctxClass',
         component: CtxClass,
@@ -74,9 +76,9 @@ const routePaths = [
     ]
   },
   {
-    title:'性能优化',
-    icon:<LaptopOutlined />,
-    list:[
+    title: '性能优化',
+    icon: <LaptopOutlined />,
+    list: [
       {
         path: '/app/performance/memo',
         component: PerMemo,
@@ -95,9 +97,9 @@ const routePaths = [
     ]
   },
   {
-    title:'自定义Hooks',
-    icon:<LaptopOutlined />,
-    list:[
+    title: '自定义Hooks',
+    icon: <LaptopOutlined />,
+    list: [
       {
         path: '/app/custom/hooks/A',
         component: CityA,
@@ -109,7 +111,18 @@ const routePaths = [
         title: 'CityB'
       }
     ]
-  }
+  },
+  {
+    title: 'Context',
+    icon: <LaptopOutlined />,
+    list: [
+      {
+        path: '/app/mobx',
+        component: MobxFn,
+        title: 'ctx-class'
+      }
+    ]
+  },
 ];
 
 export default routePaths;
