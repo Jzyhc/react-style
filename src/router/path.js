@@ -1,7 +1,7 @@
 /*
  * @Author       : jincheng
  * @Date         : 2021-04-12 10:41:36
- * @LastEditTime : 2021-06-07 11:41:41
+ * @LastEditTime : 2021-06-07 11:43:54
  * @LastEditors  : jincheng
  * @FilePath     : /react-style/src/router/path.js
  */
@@ -113,13 +113,13 @@ const routePaths = [
     ]
   },
   {
-    title: 'Context',
+    title: 'Mobx',
     icon: <LaptopOutlined />,
     list: [
       {
         path: '/app/mobx',
         component: MobxFn,
-        title: 'ctx-class'
+        title: 'Mobx'
       }
     ]
   },
