@@ -75,7 +75,7 @@ const RouteIndex = () => {
                 path="/"
                 render={() => <Redirect to="/app/welcome" />}
               />
-              {/* <Route render={() => <Redirect to="/app/jingwei/error/404" />} /> */}
+              {/* <Route render={() => <Redi  rect to="/app/jingwei/error/404" />} /> */}
             </Switch>
           </Content>
         </Layout>
