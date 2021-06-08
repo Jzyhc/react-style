@@ -1,14 +1,14 @@
 /*
  * @Author       : jincheng
  * @Date         : 2021-06-08 11:03:33
- * @LastEditTime : 2021-06-08 11:03:41
+ * @LastEditTime : 2021-06-08 16:39:28
  * @LastEditors  : jincheng
  * @FilePath     : /react-style/src/store/index.js
  */
-import HomeStore from "./homeStore";
+import homeStore from "./homeStore";
 import OneStore from "./oneStore";
 let oneStore = new OneStore();
-let homeStore = new HomeStore();
+
 const stores = {
   oneStore,
   homeStore

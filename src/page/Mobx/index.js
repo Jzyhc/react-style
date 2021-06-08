@@ -1,7 +1,7 @@
 /*
  * @Author       : jincheng
  * @Date         : 2021-06-07 11:31:15
- * @LastEditTime : 2021-06-08 15:52:09
+ * @LastEditTime : 2021-06-08 16:34:28
  * @LastEditors  : jincheng
  * @FilePath     : /react-style/src/page/mobx/index.js
  */
@@ -14,11 +14,11 @@ import { observer, inject } from "mobx-react";
 @inject("homeStore")
 @observer
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-    console.log('12112',this.props)
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {};
+  //   console.log('12112',this.props)
+  // }
   lessNum = () => {
     this.props.homeStore.lessNum();
   }
